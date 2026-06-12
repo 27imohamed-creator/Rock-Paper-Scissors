@@ -22,6 +22,9 @@
         }
         console.log(getHumanChoice());
 
+        humanScore = 0;
+        computerScore = 0;
+
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
                 return "It's a tie!";
@@ -36,6 +39,15 @@
             }
         }
         console.log(playRound(getHumanChoice(), getComputerChoice()));
+
+        function playGame() {
+            for (let i = 0; i < 5; i++) {
+                const playerSelection = getHumanChoice();
+                const computerSelection = getComputerChoice();
+                const result = playRound(playerSelection, computerSelection);
+                console.log(result);
+            }
+        }
     </script>
 </body>
 
