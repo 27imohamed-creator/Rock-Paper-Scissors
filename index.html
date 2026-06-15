@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+- Ask the user inputs their choice 
+- The computer will give you an answer either "Rock", "Paper" and "scissors"
+*- Using if else statements rock beats scissors, paper beats rock, scissors beat paper 
+* -The answers will either result in a win a tie or a loss according to what the user inputs 
+- The computer should keep track of the score for both the user and the computer
+- Game loops  
+- score will go up to 5
+
+
+     
+
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +28,11 @@
             const randomIndex = Math.floor(Math.random() * choices.length);
             return choices[randomIndex];
         }
-        console.log(getComputerChoice());
 
         function getHumanChoice() {
             const userInput = prompt("Choose rock, paper, or scissors:");
             return userInput ? userInput.toLowerCase() : null;
         }
-        console.log(getHumanChoice());
 
         humanScore = 0;
         computerScore = 0;
